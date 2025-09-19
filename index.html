@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>মালের হিসাব</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>📋 মালের হিসাব ফর্ম</h2>
+
+    <div class="form-group">
+      <label>তারিখ</label>
+      <input type="date" id="dateInput">
+    </div>
+
+    <div class="form-group">
+      <label>Harunur Rashid মালের পরিমাণ (কেজি)</label>
+      <input type="number" id="hrQty" placeholder="Enter quantity">
+    </div>
+
+    <div class="form-group">
+      <label>Brother's মালের পরিমাণ (কেজি)</label>
+      <input type="number" id="brQty" placeholder="Enter quantity">
+    </div>
+
+    <div class="form-group">
+      <label>মাথার পরিমাণ (কেজি)</label>
+      <input type="number" id="headQty" placeholder="Enter quantity">
+    </div>
+
+    <div class="form-group">
+      <label>Harunur Rashid মালের দাম (টাকা)</label>
+      <input type="number" id="hrPrice" placeholder="Enter price">
+    </div>
+
+    <div class="form-group">
+      <label>Brother's মালের দাম (টাকা)</label>
+      <input type="number" id="brPrice" placeholder="Enter price">
+    </div>
+
+    <div class="form-group">
+      <label>কমিশন রেট (প্রতি কেজি)</label>
+      <select id="commissionRate">
+        <option value="10">10</option>
+        <option value="9">9</option>
+        <option value="8">8</option>
+        <option value="7">7</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>পরিশোধ (টাকা)</label>
+      <input type="number" id="paid" placeholder="Enter paid amount">
+    </div>
+
+    <button onclick="generateMemo()">📝 Generate Memo</button>
+
+    <div id="memo" class="memo"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
